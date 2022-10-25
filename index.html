@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="DrugOOD: Out-of-Distribution (OOD) Dataset Curator and Benchmark for AI-aided Drug Discovery--A Focus on Affinity Prediction Problems with Noise Annotations.">
+  <meta name="keywords" content="Transformers, Fine-tuning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DrugOOD</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">DrugOOD: Out-of-Distribution (OOD) Dataset Curator and Benchmark for AI-aided Drug Discovery--A Focus on Affinity Prediction Problems with Noise Annotations</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--<section class="hero teaser">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="hero-body">-->
+<!--      <video id="teaser" autoplay muted loop playsinline height="100%">-->
+<!--        <source src="./static/images/teaser.mp4"-->
+<!--                type="video/mp4">-->
+<!--      </video>-->
+<!--      <h2 class="subtitle has-text-centered">-->
+<!--        Adapt Vision Transformers to downstream tasks by fine-tuning less than 2% parameters.-->
+<!--      </h2>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<!--##################################   Visualization   ##################################-->
+
+<section class="section" id="Exp1">
+  <div class="container is-max-desktop content">
+    <h2 style="text-align: center;" class="title is-4">S-Q1:Experimental results of different architectures</h2>
+    <div class="columns is-centered has-text-centered">
+    <table style="margin-left: auto; margin-right: auto;" width="595">
+    <tbody>
+    <tr>
+    <td width="85">&nbsp;</td>
+    <td style="text-align: center;" colspan="2" width="170">Assay</td>
+    <td style="text-align: center;" colspan="2" width="170">Molecular Scaffold</td>
+    <td style="text-align: center;" colspan="2" width="170">Molecular Size</td>
+    </tr>
+    <tr style="text-align: center;">
+    <td>Network</td>
+    <td>Test (ID)</td>
+    <td>Test (OOD)</td>
+    <td>Test (ID)</td>
+    <td>Test (OOD)</td>
+    <td>Test (ID)</td>
+    <td>Test (OOD)</td>
+    </tr>
+    <tr style="text-align: center;">
+    <td>GIN</td>
+    <td>89.73 (2.52)</td>
+    <td>70.86 (0.38)</td>
+    <td>84.24 (1.83)</td>
+    <td>68.74 (1.07)</td>
+    <td>92.75 (0.24)</td>
+    <td>66.37 (0.35)</td>
+    </tr>
+    <tr style="text-align: center;">
+    <td>GAT</td>
+    <td>86.58 (1.03)</td>
+    <td>70.83 (0.54)</td>
+    <td>80.65 (1.04)</td>
+    <td>67.00 (0.74)</td>
+    <td>92.06 (0.60)</td>
+    <td>66.04 (0.38)</td>
+    </tr>
+    <tr style="text-align: center;">
+    <td>GCN</td>
+    <td>86.67 (0.85)</td>
+    <td>69.10 (0.73)</td>
+    <td>84.14 (0.89)&nbsp;</td>
+    <td>67.78 (1.69)&nbsp;</td>
+    <td>91.53 (0.84)</td>
+    <td>65.38 (0.13)&nbsp;</td>
+    </tr>
+    <tr style="text-align: center;">
+    <td>Weave</td>
+    <td>87.12 (1.49)</td>
+    <td>69.88 (0.54)</td>
+    <td>79.33 (1.89)&nbsp;</td>
+    <td>65.48 (0.93)&nbsp;</td>
+    <td>86.21 (0.69)</td>
+    <td>63.13 (0.19)</td>
+    </tr>
+    <tr style="text-align: center;">
+    <td>NF</td>
+    <td>88.04 (1.32)</td>
+    <td>69.50 (0.27)&nbsp;</td>
+    <td>85.26 (0.97)</td>
+    <td>67.43 (1.77)</td>
+    <td>92.23 (0.16)</td>
+    <td>66.06 (0.16)&nbsp;</td>
+    </tr>
+    <tr style="text-align: left;">
+    <td colspan="30" class="cap foot">
+      The results of different graph neural network structures on the three data sets, the parenthese show standard deviation across 3 replicaes. Limited by rebutal time, we are unbale to produce all networks' results, we promise to provide a more complete benchmarking of the network architectures in the revised paper.
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="Exp2">
+  <div class="container is-max-desktop content">
+    <h2 style="text-align: center;" class="title is-4">R8-Q4:Experimental results of using pretrained protein encoder</h2>
+    <div class="columns is-centered has-text-centered">
+      <table style="margin-left: auto; margin-right: auto;" width="595">
+      <tbody>
+      <tr>
+      <td width="85">&nbsp;</td>
+      <td colspan="2" width="170">Assay</td>
+      <td colspan="2" width="170">Molecular Scaffold</td>
+      <td colspan="2" width="170">Molecular Size</td>
+      </tr>
+      <tr>
+      <td>Network</td>
+      <td>Test (ID)</td>
+      <td>Test (OOD)</td>
+      <td>Test (ID)</td>
+      <td>Test (OOD)</td>
+      <td>Test (ID)</td>
+      <td>Test (OOD)</td>
+      </tr>
+      <tr>
+      <td>Bert</td>
+      <td>89.73(2.52)</td>
+      <td>70.86(0.38)</td>
+      <td>84.24(1.83)</td>
+      <td>68.74(1.07)</td>
+      <td>92.75(0.24)</td>
+      <td>66.37(0.35)</td>
+      </tr>
+      <tr>
+      <td>ProteinBert</td>
+      <td>89.93 (1.17)</td>
+      <td>71.76 (0.42)</td>
+      <td>84.59 (1.39)</td>
+      <td>69.33 (1.86)</td>
+      <td>91.66 (1.27)</td>
+      <td>66.80 (0.99)</td>
+      </tr>
+      <tr style="text-align: left;">
+      <td colspan="30" class="cap foot">
+        The results of different protein encoders on the three data sets, the parentheses show standard deviation across 3 replies. Note that the ProteinBert is pre-trained on a large-scale protein sequence database, making it show superior performance over data with distribution shift.
+      </td>
+      </tr>
+      </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="Exp3">
+  <div class="container is-max-desktop content">
+    <h2 style="text-align: center;" class="title is-4">R10-Q3: Upper-bound performance of an OOD-trained "oracle"</h2>
+    <div class="columns is-centered has-text-centered">
+      <table style="margin-left: auto; margin-right: auto;" width="825">
+        <tbody>
+        <tr>
+        <td style="text-align: center;" width="75">&nbsp;</td>
+        <td style="text-align: center;" colspan="2" width="150">Assay</td>
+        <td style="text-align: center;" colspan="2" width="150">Molecular Scaffold</td>
+        <td style="text-align: center;" colspan="2" width="150">Molecular Size</td>
+        <td style="text-align: center;" colspan="2" width="150">Protein&nbsp;</td>
+        <td style="text-align: center;" colspan="2" width="150">Protein Family</td>
+        </tr>
+        <tr>
+        <td style="text-align: center;">&nbsp;</td>
+        <td style="text-align: center;">Test (ID)</td>
+        <td style="text-align: center;">Test (OOD)</td>
+        <td style="text-align: center;">Test (ID)</td>
+        <td style="text-align: center;">Test (OOD)</td>
+        <td style="text-align: center;">Test (ID)</td>
+        <td style="text-align: center;">Test (OOD)</td>
+        <td style="text-align: center;">Test (ID)</td>
+        <td style="text-align: center;">Test (OOD)</td>
+        <td style="text-align: center;">Test (ID)</td>
+        <td style="text-align: center;">Test (OOD)</td>
+        </tr>
+        <tr>
+        <td style="text-align: center;">Regular</td>
+        <td style="text-align: center;">89.73 (2.52)</td>
+        <td style="text-align: center;">70.60 (0.27)</td>
+        <td style="text-align: center;">84.24 (1.83)</td>
+        <td style="text-align: center;">68.63 (1.13)</td>
+        <td style="text-align: center;">91.37 (0.98)</td>
+        <td style="text-align: center;">62.73 (0.88)</td>
+        <td style="text-align: center;">90.32 (1.49)</td>
+        <td style="text-align: center;">69.02 (0.56)</td>
+        <td style="text-align: center;">86.79 (2.85)</td>
+        <td style="text-align: center;">69.20 (1.40)</td>
+        </tr>
+        <tr>
+        <td style="text-align: center;">Mixed-To-Test</td>
+        <td style="text-align: center;">86.78 (3.93)</td>
+        <td style="text-align: center;">75.68 (2.81)</td>
+        <td style="text-align: center;">84.84 (1.36)</td>
+        <td style="text-align: center;">70.75 (1.79)</td>
+        <td style="text-align: center;">92.17 (0.85)</td>
+        <td style="text-align: center;">63.86 (0.71)</td>
+        <td style="text-align: center;">90.46 (0.66)&nbsp;</td>
+        <td style="text-align: center;">74.47 (1.34)</td>
+        <td style="text-align: center;">86.32 (1.21)</td>
+        <td style="text-align: center;">69.88 (0.72)</td>
+        </tr>
+        <tr style="text-align: left;">
+        <td colspan="30" class="cap foot">
+          Ideally, to measure the upper-bound OOD performance, we should use the Test-To-Test strategy. [c.f. WILDS] i.e., hold the test set Test_ood fixed and train on a separate but identically-distributed training set Train_ood. However, such a strategy requires Train_ood to match the size of Train_iid, this is not feasible in our dataset, as Train_iid usually includes most of the available data. Following WILDS, we conducted the exp under "Mixed-To-Test". i.e., train a model on a mixture of data from Train_iid and Test_ood (subset of 20 percent) and then evaluate it only on the rest data of Test_ood, to provide an underrated upper bound on OOD domain performance. The results show that adding a small amount of OOD domain improves model performance in OOD Test set. This is an underestimated upper limit performance, but it indicates that method performance isn't attributable to learning difficulty, which we'll discuss in the latest version. In details, we used the default GIN and Bert to encode the small molecule and protein data. Note that the models in the table are validated on a the patical Test_ood set (subset of 80 percent), unlike the full OOD dataset used in the maintext.
+        </td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--<section class="section" id="BibTeX">-->
+<!--  <div class="container is-max-desktop content">-->
+<!--    <h2 class="title">BibTeX</h2>-->
+<!--    <pre><code>@article{adaptformer,-->
+<!--      title={AdaptFormer: Adapting Vision Transformers for Scalable Visual Recognition},-->
+<!--      author={anonymous author},-->
+<!--      journal={submission},-->
+<!--      year={2022}-->
+<!--}</code></pre>-->
+<!--  </div>-->
+<!--</section>-->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <h3 class="title">Acknowledgements</h3>
+          <p>
+            The website template was borrowed from <a href="https://nerfies.github.io/">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
